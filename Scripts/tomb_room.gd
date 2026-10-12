@@ -5,6 +5,7 @@ extends Node2D
 @onready var pharaoh: CharacterBody2D = $Pharaoh
 @onready var boat: Node2D = $boat
 @onready var boat_cue: Area2D = $item_info_popup
+@onready var item_interact_area: Area2D = $item_interact_area
 
 
 
@@ -25,16 +26,42 @@ func _ready() -> void:
 
 
 func _on_ruin_1_area_2d_area_entered(area: Area2D) -> void:
-	pass 
+	print("1")
+	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
+		print("2")
+		info_tomb_color.visible = true
+		info_tomb_label.visible = true
+		await get_tree().create_timer(5).timeout
+		info_tomb_color.visible = false
+		info_tomb_label.text = ""
+		info_tomb_label.visible = false
 	
 
 func _on_ruin_2_area_2d_area_entered(area: Area2D) -> void:
-	pass
+	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
+		info_tomb_color.visible = true
+		info_tomb_label.visible = true
+		await get_tree().create_timer(5).timeout
+		info_tomb_color.visible = false
+		info_tomb_label.text = ""
+		info_tomb_label.visible = false
 
 
 func _on_ruin_3_area_2d_area_entered(area: Area2D) -> void:
-	pass 
+	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
+		info_tomb_color.visible = true
+		info_tomb_label.visible = true
+		await get_tree().create_timer(5).timeout
+		info_tomb_color.visible = false
+		info_tomb_label.text = ""
+		info_tomb_label.visible = false 
 
 
 func _on_ruin_4_area_2d_area_entered(area: Area2D) -> void:
-	pass
+	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
+		info_tomb_color.visible = true
+		info_tomb_label.visible = true
+		await get_tree().create_timer(5).timeout
+		info_tomb_color.visible = false
+		info_tomb_label.text = ""
+		info_tomb_label.visible = false

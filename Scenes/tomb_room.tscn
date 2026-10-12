@@ -41,10 +41,6 @@ texture = ExtResource("1_yfjaj")
 position = Vector2(753, 33)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_51kwm")]
-position = Vector2(-221, 162)
-scale = Vector2(7, 7)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=897664537]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1738459975]
@@ -81,6 +77,8 @@ position = Vector2(-833, 439)
 shape = SubResource("CircleShape2D_uuqmu")
 
 [node name="Ruin2Area2D" type="Area2D" parent="." unique_id=1820162851]
+collision_layer = 4
+collision_mask = 4
 
 [node name="ruin2" type="Sprite2D" parent="Ruin2Area2D" unique_id=128879718]
 position = Vector2(-773, -327)
@@ -93,6 +91,8 @@ position = Vector2(-768, -328)
 shape = SubResource("CircleShape2D_3vgto")
 
 [node name="Ruin3Area2D" type="Area2D" parent="." unique_id=393115211]
+collision_layer = 4
+collision_mask = 4
 
 [node name="ruin3" type="Sprite2D" parent="Ruin3Area2D" unique_id=172601481]
 position = Vector2(-359.00003, -126.99999)
@@ -105,6 +105,8 @@ position = Vector2(-360, -120)
 shape = SubResource("CircleShape2D_o135m")
 
 [node name="Ruin4Area2D" type="Area2D" parent="." unique_id=1797535833]
+collision_layer = 4
+collision_mask = 4
 
 [node name="ruin4" type="Sprite2D" parent="Ruin4Area2D" unique_id=1490193594]
 position = Vector2(74, -269.00006)
@@ -132,6 +134,10 @@ theme_override_fonts/font = ExtResource("5_gshot")
 theme_override_font_sizes/font_size = 100
 text = "Nothing Here"
 horizontal_alignment = 1
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_51kwm")]
+position = Vector2(-221, 162)
+scale = Vector2(7, 7)
 
 [connection signal="body_entered" from="Area2D" to="Pharaoh" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
