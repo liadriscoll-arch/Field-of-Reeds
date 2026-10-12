@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://flkf3t0y0v63"]
+
+[ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="1_rftmt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
+size = Vector2(215, 231)
+
+[node name="guardian" type="Node2D" unique_id=1587372267]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303408107]
+scale = Vector2(10, 10)
+texture = ExtResource("1_rftmt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1434499368]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1950601253]
+position = Vector2(-16.5, -56.5)
+shape = SubResource("RectangleShape2D_uuqmu")
