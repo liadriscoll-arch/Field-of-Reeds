@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cmax2gp0ibkv5"]
+
+[ext_resource type="Script" uid="uid://dc6ahljy6p7gi" path="res://Scripts/room_4.gd" id="1_dpqp8"]
+[ext_resource type="Texture2D" uid="uid://fp614kqi5pop" path="res://Assets/4_bg_reeds.png" id="1_l41wr"]
+[ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_m5wph"]
+
+[node name="room_4" type="Node2D" unique_id=2109885412]
+script = ExtResource("1_dpqp8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1136213794]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=581762605]
+scale = Vector2(10, 10)
+texture = ExtResource("1_l41wr")
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_m5wph")]
+position = Vector2(-861, -115.00001)
+scale = Vector2(7, 7)

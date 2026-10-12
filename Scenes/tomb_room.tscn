@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://dxuknwnm44l7n"]
+
+[ext_resource type="Script" uid="uid://g0r8c4ssasjq" path="res://Scripts/tomb_room.gd" id="1_51kwm"]
+[ext_resource type="Texture2D" uid="uid://ugwuaw22p8b2" path="res://Assets/reeds-tomb-room-bg.png" id="1_yfjaj"]
+[ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_51kwm"]
+[ext_resource type="PackedScene" uid="uid://c1bpsrbqstb40" path="res://Scenes/boat.tscn" id="4_ofw3p"]
+[ext_resource type="Script" uid="uid://dtornv2n2oos3" path="res://Scripts/leave_tomb.gd" id="4_urw11"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="5_gshot"]
+[ext_resource type="PackedScene" uid="uid://cdu1u6d1hqgl2" path="res://Scenes/item_info_popup.tscn" id="6_uucmp"]
+[ext_resource type="Script" path="res://Scripts/ruin_1_area_2d.gd" id="7_cfamj"]
+[ext_resource type="Texture2D" uid="uid://bpdn34p42llkr" path="res://Assets/reeds_ruin1.png" id="8_fxca1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiix4"]
+size = Vector2(210, 590)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
+size = Vector2(154, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuqmu"]
+radius = 81.58431
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vgto"]
+radius = 88.02273
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o135m"]
+radius = 82.02438
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fiix4"]
+radius = 71.34424
+
+[node name="tomb_room" type="Node2D" unique_id=245216658]
+script = ExtResource("1_51kwm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1358454289]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=530465740]
+scale = Vector2(10, 10)
+texture = ExtResource("1_yfjaj")
+
+[node name="boat" parent="." unique_id=236427409 instance=ExtResource("4_ofw3p")]
+position = Vector2(753, 33)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_51kwm")]
+position = Vector2(-221, 162)
+scale = Vector2(7, 7)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=897664537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1738459975]
+position = Vector2(-5, 125)
+shape = SubResource("RectangleShape2D_fiix4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2127655878]
+polygon = PackedVector2Array(120, -540, 120, -520, 940, -520, 940, 520, -940, 520, -940, -520, -130, -520, -130, -540, -960, -540, -960, 540, 960, 540, 960, -540)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=217177818]
+script = ExtResource("4_urw11")
+
+[node name="tomb_door_collision" type="CollisionShape2D" parent="Area2D" unique_id=769615906]
+position = Vector2(-7, -530)
+shape = SubResource("RectangleShape2D_uuqmu")
+
+[node name="item_info_popup" parent="." unique_id=266295725 instance=ExtResource("6_uucmp")]
+position = Vector2(745, 33)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=837738611]
+
+[node name="Ruin1Area2D" type="Area2D" parent="." unique_id=308551831]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("7_cfamj")
+
+[node name="ruin1" type="Sprite2D" parent="Ruin1Area2D" unique_id=692967879]
+position = Vector2(-829, 436)
+scale = Vector2(5, 5)
+texture = ExtResource("8_fxca1")
+
+[node name="int_ruin_1" type="CollisionShape2D" parent="Ruin1Area2D" unique_id=1540798031]
+position = Vector2(-833, 439)
+shape = SubResource("CircleShape2D_uuqmu")
+
+[node name="Ruin2Area2D" type="Area2D" parent="." unique_id=1820162851]
+
+[node name="ruin2" type="Sprite2D" parent="Ruin2Area2D" unique_id=128879718]
+position = Vector2(-773, -327)
+rotation = 1.5707964
+scale = Vector2(6, 6)
+texture = ExtResource("8_fxca1")
+
+[node name="int_ruin_2" type="CollisionShape2D" parent="Ruin2Area2D" unique_id=1447444624]
+position = Vector2(-768, -328)
+shape = SubResource("CircleShape2D_3vgto")
+
+[node name="Ruin3Area2D" type="Area2D" parent="." unique_id=393115211]
+
+[node name="ruin3" type="Sprite2D" parent="Ruin3Area2D" unique_id=172601481]
+position = Vector2(-359.00003, -126.99999)
+rotation = -3.1415925
+scale = Vector2(5, 5)
+texture = ExtResource("8_fxca1")
+
+[node name="int_ruin_3" type="CollisionShape2D" parent="Ruin3Area2D" unique_id=788821736]
+position = Vector2(-360, -120)
+shape = SubResource("CircleShape2D_o135m")
+
+[node name="Ruin4Area2D" type="Area2D" parent="." unique_id=1797535833]
+
+[node name="ruin4" type="Sprite2D" parent="Ruin4Area2D" unique_id=1490193594]
+position = Vector2(74, -269.00006)
+rotation = -1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("8_fxca1")
+
+[node name="int_ruin_4" type="CollisionShape2D" parent="Ruin4Area2D" unique_id=133942864]
+position = Vector2(71, -272)
+shape = SubResource("CircleShape2D_fiix4")
+
+[node name="info_tomb_color" type="ColorRect" parent="." unique_id=2040099957]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="info_tomb_label" type="Label" parent="." unique_id=1560197156]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("5_gshot")
+theme_override_font_sizes/font_size = 100
+text = "Nothing Here"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="Pharaoh" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="area_entered" from="Ruin1Area2D" to="." method="_on_ruin_1_area_2d_area_entered"]
+[connection signal="area_entered" from="Ruin2Area2D" to="." method="_on_ruin_2_area_2d_area_entered"]
+[connection signal="area_entered" from="Ruin3Area2D" to="." method="_on_ruin_3_area_2d_area_entered"]
+[connection signal="area_entered" from="Ruin4Area2D" to="." method="_on_ruin_4_area_2d_area_entered"]
