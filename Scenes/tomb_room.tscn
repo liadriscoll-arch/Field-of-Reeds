@@ -7,11 +7,10 @@
 [ext_resource type="Script" uid="uid://dtornv2n2oos3" path="res://Scripts/leave_tomb.gd" id="4_urw11"]
 [ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="5_gshot"]
 [ext_resource type="PackedScene" uid="uid://cdu1u6d1hqgl2" path="res://Scenes/item_info_popup.tscn" id="6_uucmp"]
-[ext_resource type="Script" path="res://Scripts/ruin_1_area_2d.gd" id="7_cfamj"]
 [ext_resource type="Texture2D" uid="uid://bpdn34p42llkr" path="res://Assets/reeds_ruin1.png" id="8_fxca1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fiix4"]
-size = Vector2(210, 590)
+size = Vector2(210, 517)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
 size = Vector2(154, 20)
@@ -44,7 +43,7 @@ scale = Vector2(0.8, 0.8)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=897664537]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1738459975]
-position = Vector2(-5, 125)
+position = Vector2(-5, 88.5)
 shape = SubResource("RectangleShape2D_fiix4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2127655878]
@@ -65,7 +64,6 @@ position = Vector2(745, 33)
 [node name="Ruin1Area2D" type="Area2D" parent="." unique_id=308551831]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("7_cfamj")
 
 [node name="ruin1" type="Sprite2D" parent="Ruin1Area2D" unique_id=692967879]
 position = Vector2(-829, 436)
@@ -118,6 +116,22 @@ texture = ExtResource("8_fxca1")
 position = Vector2(71, -272)
 shape = SubResource("CircleShape2D_fiix4")
 
+[node name="item_info_popup2" parent="." unique_id=648613357 instance=ExtResource("6_uucmp")]
+position = Vector2(-833, 439)
+
+[node name="item_info_popup3" parent="." unique_id=2060134514 instance=ExtResource("6_uucmp")]
+position = Vector2(-360, -120)
+
+[node name="item_info_popup4" parent="." unique_id=1035125488 instance=ExtResource("6_uucmp")]
+position = Vector2(-768, -328)
+
+[node name="item_info_popup5" parent="." unique_id=401929697 instance=ExtResource("6_uucmp")]
+position = Vector2(71, -272)
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_51kwm")]
+position = Vector2(-221, 162)
+scale = Vector2(7, 7)
+
 [node name="info_tomb_color" type="ColorRect" parent="." unique_id=2040099957]
 offset_left = -601.0
 offset_top = 332.0
@@ -135,12 +149,8 @@ theme_override_font_sizes/font_size = 100
 text = "Nothing Here"
 horizontal_alignment = 1
 
-[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_51kwm")]
-position = Vector2(-221, 162)
-scale = Vector2(7, 7)
-
-[connection signal="body_entered" from="Area2D" to="Pharaoh" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Pharaoh" method="_on_area_2d_body_entered"]
 [connection signal="area_entered" from="Ruin1Area2D" to="." method="_on_ruin_1_area_2d_area_entered"]
 [connection signal="area_entered" from="Ruin2Area2D" to="." method="_on_ruin_2_area_2d_area_entered"]
 [connection signal="area_entered" from="Ruin3Area2D" to="." method="_on_ruin_3_area_2d_area_entered"]

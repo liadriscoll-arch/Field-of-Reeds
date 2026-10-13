@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://crqdocgxsrdq2"]
+
+[ext_resource type="Texture2D" uid="uid://dej5y4liaqcno" path="res://Assets/2_bg_reeds.png" id="1_pv45b"]
+[ext_resource type="Script" uid="uid://do635i8fetcnu" path="res://Scripts/guardian_guess_screen.gd" id="1_qdica"]
+[ext_resource type="Texture2D" uid="uid://c6p0oppbdmbeg" path="res://Assets/reeds_ruin2.png" id="2_qdica"]
+[ext_resource type="Texture2D" uid="uid://cwylthau66gmw" path="res://Assets/reeds_ruin3.png" id="3_khwqi"]
+[ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="4_b0eqe"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="5_phfji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cll8n"]
+radius = 89.0
+
+[node name="guardian_guess_screen" type="Node2D" unique_id=1611402332]
+script = ExtResource("1_qdica")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=689118758]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1826339177]
+scale = Vector2(10, 10)
+texture = ExtResource("1_pv45b")
+
+[node name="Ruin5Area" type="Area2D" parent="." unique_id=533358535]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin5Area" unique_id=482182072]
+position = Vector2(-748.99994, 412.99997)
+scale = Vector2(5, 5)
+texture = ExtResource("2_qdica")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruin5Area" unique_id=1403329150]
+position = Vector2(-749, 413)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Ruin6Area" type="Area2D" parent="." unique_id=1942885977]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin6Area" unique_id=144821422]
+position = Vector2(417, 252.99998)
+rotation = 1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("2_qdica")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ruin6Area" unique_id=2081071425]
+position = Vector2(414, 254.99998)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Ruin7Area" type="Area2D" parent="." unique_id=1131718936]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin7Area" unique_id=1567324105]
+position = Vector2(249.00003, -105.000015)
+rotation = 3.1415927
+scale = Vector2(5, 5)
+texture = ExtResource("2_qdica")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruin7Area" unique_id=1556105329]
+position = Vector2(250, -106)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Ruin8Area" type="Area2D" parent="." unique_id=1250427010]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin8Area" unique_id=1689406062]
+position = Vector2(-604.00006, -26.999992)
+rotation = -1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("2_qdica")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruin8Area" unique_id=1726288042]
+position = Vector2(-597, -29)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Ruin9Area" type="Area2D" parent="." unique_id=817259678]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin9Area" unique_id=956903288]
+position = Vector2(709, -345.00003)
+scale = Vector2(5, 5)
+texture = ExtResource("3_khwqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruin9Area" unique_id=996367251]
+position = Vector2(717, -346)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Ruin10Area" type="Area2D" parent="." unique_id=2139247263]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Ruin10Area" unique_id=1130857264]
+position = Vector2(-167, 78.999985)
+rotation = 1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("3_khwqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruin10Area" unique_id=965800664]
+position = Vector2(-169, 66)
+shape = SubResource("CircleShape2D_cll8n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1753888772]
+position = Vector2(853.99994, -258.99997)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("4_b0eqe")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=467327909]
+position = Vector2(-822.99994, -261)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("4_b0eqe")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1688934504]
+position = Vector2(245.99998, -393)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("4_b0eqe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1193780617]
+offset_left = -1087.0
+offset_top = -655.0
+offset_right = 1014.0
+offset_bottom = 619.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Label" type="Label" parent="." unique_id=782967938]
+offset_left = -961.0
+offset_top = -541.0
+offset_right = 960.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("5_phfji")
+theme_override_font_sizes/font_size = 175
+text = "WHAT IS MY NAME?"
+horizontal_alignment = 1
+
+[node name="option1" type="Button" parent="." unique_id=542730589]
+offset_left = -908.0
+offset_top = 300.0
+offset_right = -308.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("5_phfji")
+theme_override_font_sizes/font_size = 50
+text = "option 1"
+
+[node name="option2" type="Button" parent="." unique_id=906559771]
+offset_left = -300.0
+offset_top = 300.0
+offset_right = 300.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("5_phfji")
+theme_override_font_sizes/font_size = 50
+text = "option 2"
+
+[node name="option3" type="Button" parent="." unique_id=388759435]
+offset_left = 308.0
+offset_top = 300.0
+offset_right = 908.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("5_phfji")
+theme_override_font_sizes/font_size = 50
+text = "option 3"

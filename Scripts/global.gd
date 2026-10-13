@@ -1,5 +1,7 @@
 extends Node
 
+
+var hours_spent = 10.5
 var canmove = true
 var gate_guardians = ["Sekhet-hra-asht-aru","Meti-heh","Ha-kheru","Un-hat","Seqe-hra","Uset","Qeq-hauau-ent-pehui","Se-res-hra","Aaa","Khesef-hra-asht-kheru","Seres-tepu","Ankh-f-em-fent","Shabu","Teb-hra-keha-kheft","Atek-au-kehaq-kheru","An-hra","Ates-hra","Sekhem-Mafenu-sen","Aa-maa-kheru","Khesef-khemi"]
 var main_guardian
@@ -18,6 +20,7 @@ var main_name_known = false
 var g2_name_known = false
 var g3_name_known = false
 var ship_location = Vector2(0,186)
+var brick_found = false
 
 
 func _ready() -> void:

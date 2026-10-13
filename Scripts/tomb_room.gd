@@ -27,11 +27,9 @@ func _ready() -> void:
 
 
 func _on_ruin_1_area_2d_area_entered(area: Area2D) -> void:
-	print("1")
 	if area.name == "item_interact_area":
 		while $Ruin1Area2D.overlaps_area(area): 
 			if Input.is_action_pressed("ui_accept"):
-				print("2")
 				info_tomb_color.visible = true
 				info_tomb_label.visible = true
 				info_tomb_label.text = "Nothing here"
@@ -43,33 +41,42 @@ func _on_ruin_1_area_2d_area_entered(area: Area2D) -> void:
 	
 
 func _on_ruin_2_area_2d_area_entered(area: Area2D) -> void:
-	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
-		info_tomb_color.visible = true
-		info_tomb_label.visible = true
-		info_tomb_label.text = "Nothing here"
-		await get_tree().create_timer(2).timeout
-		info_tomb_color.visible = false
-		info_tomb_label.text = ""
-		info_tomb_label.visible = false
+	if area.name == "item_interact_area":
+		while $Ruin2Area2D.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(2).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
 
 
 func _on_ruin_3_area_2d_area_entered(area: Area2D) -> void:
-	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
-		info_tomb_color.visible = true
-		info_tomb_label.visible = true
-		info_tomb_label.text = "Nothing here"
-		await get_tree().create_timer(2).timeout
-		info_tomb_color.visible = false
-		info_tomb_label.text = ""
-		info_tomb_label.visible = false 
+	if area.name == "item_interact_area":
+		while $Ruin3Area2D.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(2).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
 
 
 func _on_ruin_4_area_2d_area_entered(area: Area2D) -> void:
-	if area.name == "item_interact_area" and Input.is_action_pressed("ui_accept"):
-		info_tomb_color.visible = true
-		info_tomb_label.visible = true
-		info_tomb_label.text = "Nothing here"
-		await get_tree().create_timer(2).timeout
-		info_tomb_color.visible = false
-		info_tomb_label.text = ""
-		info_tomb_label.visible = false
+	if area.name == "item_interact_area":
+		while $Ruin4Area2D.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(2).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame

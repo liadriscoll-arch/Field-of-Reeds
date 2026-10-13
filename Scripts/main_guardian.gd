@@ -23,4 +23,5 @@ func _on_body_entered(body: Node2D) -> void:
 		info_tomb_color.visible = false
 		info_tomb_label.text = ""
 		info_tomb_label.visible = false
-	else: return
+	await get_tree().process_frame
+	
