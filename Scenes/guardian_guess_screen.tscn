@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cwylthau66gmw" path="res://Assets/reeds_ruin3.png" id="3_khwqi"]
 [ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="4_b0eqe"]
 [ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="5_phfji"]
+[ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="6_khwqi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cll8n"]
 radius = 89.0
@@ -116,6 +117,10 @@ texture = ExtResource("4_b0eqe")
 position = Vector2(245.99998, -393)
 scale = Vector2(7.9999995, 7.9999995)
 texture = ExtResource("4_b0eqe")
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("6_khwqi")]
+position = Vector2(70, -83)
+scale = Vector2(7, 7)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1193780617]
 offset_left = -1087.0

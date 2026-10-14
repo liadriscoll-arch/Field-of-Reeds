@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b0rrhksvyi2fd" path="res://Assets/3_bg_reeds.png" id="1_1aiob"]
 [ext_resource type="Script" uid="uid://dd5tkvuotyayt" path="res://Scripts/room_3.gd" id="1_ac5qk"]
 [ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_ofmjs"]
+[ext_resource type="Script" uid="uid://crvgshderddxv" path="res://Scripts/leave_3.gd" id="4_u5i04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
+size = Vector2(20, 133)
 
 [node name="room_3" type="Node2D" unique_id=1167190826]
 script = ExtResource("1_ac5qk")
@@ -16,3 +20,18 @@ texture = ExtResource("1_1aiob")
 [node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_ofmjs")]
 position = Vector2(857, -115)
 scale = Vector2(7, 7)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1976421739]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=308177475]
+rotation = 3.1415927
+polygon = PackedVector2Array(-960, -119.999916, -940, -119.999916, -940, -520, 940, -520, 940, 519, -940, 519, -939, 129.00008, -961, 130.00009, -960, 540, 960, 540, 960, -540, -960, -540)
+
+[node name="leave_3" type="Area2D" parent="." unique_id=1850207906]
+script = ExtResource("4_u5i04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leave_3" unique_id=1751986497]
+position = Vector2(950, -6.5)
+shape = SubResource("RectangleShape2D_uuqmu")
+
+[connection signal="body_entered" from="leave_3" to="leave_3" method="_on_body_entered"]

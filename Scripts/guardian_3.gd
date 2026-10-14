@@ -11,7 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		if Global.guardian_3_guessed:
 			Global.room_2_position = Vector2(body.position.x+10, body.position.y)
-			get_tree().change_scene_to_file("res://Scenes/room_2.tscn")
+			get_tree().change_scene_to_file("res://Scenes/room_3.tscn")
 		
 		else:
 			Global.current_guardian_guess = 3
@@ -27,4 +27,3 @@ func _on_body_entered(body: Node2D) -> void:
 		info_tomb_color.visible = false
 		info_tomb_label.text = ""
 		info_tomb_label.visible = false
-	await get_tree().process_frame

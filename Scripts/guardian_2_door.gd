@@ -13,13 +13,13 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		if Global.guardian_2_guessed:
 			Global.room_2_position = Vector2(body.position.x-10, body.position.y)
-			get_tree().change_scene_to_file("res://Scenes/room_2.tscn")
+			get_tree().change_scene_to_file("res://Scenes/room_4.tscn")
 		
 		else:
 			Global.current_guardian_guess = 2
 			Global.room_2_position = Vector2(body.position.x-10, body.position.y)
-			get_tree().change_scene_to_file("res://Scenes/room_2_text.tscn")
-			Global.canmove = false
+			get_tree().change_scene_to_file("res://Scenes/guardian_guess_screen.tscn")
+			
 	elif pharaoh.position.x >= 850:
 		info_tomb_color.visible = true
 		info_tomb_label.add_theme_font_size_override("font_size", 60)
@@ -29,4 +29,3 @@ func _on_body_entered(body: Node2D) -> void:
 		info_tomb_color.visible = false
 		info_tomb_label.text = ""
 		info_tomb_label.visible = false
-	await get_tree().process_frame
