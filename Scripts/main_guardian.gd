@@ -14,7 +14,7 @@ func _on_body_entered(body: Node2D) -> void:
 			Global.room_2_position = Vector2(body.position.x+10, body.position.y)
 			get_tree().change_scene_to_file("res://Scenes/room_2_text.tscn")
 			Global.canmove = false
-	elif pharaoh.position.y <= -100:
+	elif pharaoh.position.y <= -400:
 		info_tomb_color.visible = true
 		info_tomb_label.add_theme_font_size_override("font_size", 60)
 		info_tomb_label.text = "I will let you in if you know my name"

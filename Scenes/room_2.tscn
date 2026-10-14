@@ -233,7 +233,7 @@ scale = Vector2(7.9999995, 7.9999995)
 texture = ExtResource("9_shwdd")
 
 [node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_3lycl")]
-position = Vector2(-8.000004, 287.00003)
+position = Vector2(-3.000001, 255.99997)
 scale = Vector2(7, 7)
 
 [node name="info_tomb_color" type="ColorRect" parent="." unique_id=1292849015]
