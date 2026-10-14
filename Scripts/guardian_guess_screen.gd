@@ -4,8 +4,11 @@ extends Node2D
 @onready var option_3: Button = $option3
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
+	var option1
+	var option2
+	var option3
 	var correct_option = randi_range(1,3)
 	if correct_option == 1:
 		if Global.current_guardian_guess == 1:
