@@ -1,8 +1,10 @@
 extends Node2D
+@onready var pharaoh: CharacterBody2D = $Pharaoh
 
 
 func _ready() -> void:
 	Global.canmove = false
+	pharaoh.position = Global.room_4_position
 
 func _on_steal_button_pressed() -> void:
 	Global.discovered.append("brick_piece")
