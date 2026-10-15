@@ -22,11 +22,19 @@ func _on_wall_area_area_entered(area: Area2D) -> void:
 			if Input.is_action_pressed("ui_accept"):
 				info_tomb_color.visible = true
 				info_tomb_label.visible = true
-				if Global.brick_found:
+				
+				if Global.discovered.has("brick_piece"):
+					info_tomb_label.add_theme_font_size_override("font_size", 40)
+					info_tomb_label.text = "You place the last piece to find the name:\n" + Global.main_guardian
+					Global.main_name_known = true
+					await get_tree().create_timer(4).timeout
+					
+				elif Global.brick_found:
 					info_tomb_label.add_theme_font_size_override("font_size", 55)
 					info_tomb_label.text = "You place the brick to find the name:\n" + Global.guardian_2
 					Global.g2_name_known = true 
 					await get_tree().create_timer(4).timeout
+					
 				else:
 					info_tomb_label.add_theme_font_size_override("font_size", 80)
 					info_tomb_label.text = "Something here is missing"

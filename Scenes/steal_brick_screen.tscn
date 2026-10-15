@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://43uy0p6v3pif"]
+
+[ext_resource type="Texture2D" uid="uid://dej5y4liaqcno" path="res://Assets/2_bg_reeds.png" id="1_1jm4t"]
+[ext_resource type="Script" uid="uid://cmtl70xbldgix" path="res://Scripts/steal_brick_screen.gd" id="1_tmhj6"]
+[ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_bm7p8"]
+[ext_resource type="Texture2D" uid="uid://cwylthau66gmw" path="res://Assets/reeds_ruin3.png" id="3_fkwn7"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="3_mu27x"]
+[ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="4_ebhwy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_re3qr"]
+radius = 163.60013
+
+[node name="steal_brick_screen" type="Node2D" unique_id=1536118456]
+script = ExtResource("1_tmhj6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1476293173]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1245650593]
+scale = Vector2(10, 10)
+texture = ExtResource("1_1jm4t")
+
+[node name="center_ruin" type="Area2D" parent="." unique_id=1705949947]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="center_ruin" unique_id=1209129631]
+rotation = -1.5707964
+scale = Vector2(10, 10)
+texture = ExtResource("3_fkwn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center_ruin" unique_id=949087062]
+shape = SubResource("CircleShape2D_re3qr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=601248864]
+position = Vector2(-270.00003, -50.000004)
+scale = Vector2(10, 10)
+texture = ExtResource("4_ebhwy")
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_bm7p8")]
+position = Vector2(-820, -110)
+scale = Vector2(7, 7)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=657056847]
+offset_left = -1067.0
+offset_top = -650.0
+offset_right = 1077.0
+offset_bottom = 582.0
+color = Color(0, 0, 0, 0.84313726)
+
+[node name="Label" type="Label" parent="." unique_id=1186527148]
+offset_left = -961.0
+offset_top = -541.0
+offset_right = 960.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("3_mu27x")
+theme_override_font_sizes/font_size = 80
+text = "In the rubble lies the last missing piece
+of the brick, allowing you to
+enter the next room. All it asks for is 
+an amulet. The entity
+guarding it looks away:
+What will you do?"
+horizontal_alignment = 1
+
+[node name="steal_button" type="Button" parent="." unique_id=937499848]
+offset_left = -812.0
+offset_top = 297.0
+offset_right = -150.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_mu27x")
+theme_override_font_sizes/font_size = 100
+text = "Steal it"
+
+[node name="walk_away_button" type="Button" parent="." unique_id=1271981040]
+offset_left = 150.0
+offset_top = 297.0
+offset_right = 812.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_mu27x")
+theme_override_font_sizes/font_size = 100
+text = "Walk Away"
+
+[connection signal="pressed" from="steal_button" to="." method="_on_steal_button_pressed"]
+[connection signal="pressed" from="walk_away_button" to="." method="_on_walk_away_button_pressed"]

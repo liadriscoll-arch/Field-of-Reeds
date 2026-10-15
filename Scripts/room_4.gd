@@ -1,11 +1,107 @@
 extends Node2D
+@onready var info_tomb_color: ColorRect = $info_tomb_color
+@onready var info_tomb_label: Label = $info_tomb_label
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Pharaoh.position = Global.room_4_position
+	info_tomb_label.visible = false
+	info_tomb_color.visible = false
+	info_tomb_label.text = ""
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+
+
+func _on_center_ruin_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $center_ruin.overlaps_area(area):
+			if Input.is_action_pressed("ui_accept"):
+				if Global.discovered.has("amulet"):
+					Global.discovered.append("brick_piece")
+					info_tomb_color.visible = true
+					info_tomb_label.visible = true
+					info_tomb_label.add_theme_font_size_override("font_size", 60)
+					info_tomb_label.text = "The entity hands you the brick piece"
+					await get_tree().create_timer(3).timeout
+					info_tomb_color.visible = false
+					info_tomb_label.text = ""
+					info_tomb_label.visible = false
+				else:
+					get_tree().change_scene_to_file("res://Scenes/steal_brick_screen.tscn")
+
+
+func _on_text_1_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $text_1.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.add_theme_font_size_override("font_size", 30)
+				info_tomb_label.text = "text left from a previous traveler:\n spaces are like a dash in time, the start of 1 word to another"
+				await get_tree().create_timer(6).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
+
+
+func _on_text_2_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $text_2.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.add_theme_font_size_override("font_size", 30)
+				
+				info_tomb_label.text = "Nothing here"
+				
+				await get_tree().create_timer(6).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
+
+
+func _on_text_3_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $text_3.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.add_theme_font_size_override("font_size", 30)
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(6).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
+
+
+func _on_text_4_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $text_4.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.add_theme_font_size_override("font_size", 30)
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(6).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame
+
+
+func _on_text_5_area_entered(area: Area2D) -> void:
+	if area.name == "item_interact_area":
+		while $text_5.overlaps_area(area): 
+			if Input.is_action_pressed("ui_accept"):
+				info_tomb_color.visible = true
+				info_tomb_label.visible = true
+				info_tomb_label.add_theme_font_size_override("font_size", 30)
+				info_tomb_label.text = "Nothing here"
+				await get_tree().create_timer(6).timeout
+				info_tomb_color.visible = false
+				info_tomb_label.text = ""
+				info_tomb_label.visible = false
+			await get_tree().process_frame

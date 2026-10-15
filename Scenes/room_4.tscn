@@ -4,9 +4,31 @@
 [ext_resource type="Texture2D" uid="uid://fp614kqi5pop" path="res://Assets/4_bg_reeds.png" id="1_l41wr"]
 [ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_m5wph"]
 [ext_resource type="Script" uid="uid://bmmfi0i7iln1u" path="res://Scripts/room_4_2.gd" id="4_kul8h"]
+[ext_resource type="PackedScene" uid="uid://cdu1u6d1hqgl2" path="res://Scenes/item_info_popup.tscn" id="5_avbm7"]
+[ext_resource type="Texture2D" uid="uid://cwylthau66gmw" path="res://Assets/reeds_ruin3.png" id="6_bg34n"]
+[ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="7_txrf6"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="8_25m4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
 size = Vector2(20, 155)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuqmu"]
+radius = 73.00685
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vgto"]
+radius = 75.026665
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fiix4"]
+radius = 75.00667
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o135m"]
+radius = 79.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_87cqv"]
+radius = 71.7844
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yncx4"]
+radius = 163.60013
 
 [node name="room_4" type="Node2D" unique_id=2109885412]
 script = ExtResource("1_dpqp8")
@@ -16,10 +38,6 @@ script = ExtResource("1_dpqp8")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=581762605]
 scale = Vector2(10, 10)
 texture = ExtResource("1_l41wr")
-
-[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_m5wph")]
-position = Vector2(-861, -115.00001)
-scale = Vector2(7, 7)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=330110863]
 
@@ -33,4 +51,103 @@ script = ExtResource("4_kul8h")
 position = Vector2(-950, -12.5)
 shape = SubResource("RectangleShape2D_uuqmu")
 
+[node name="text_1" type="Area2D" parent="." unique_id=159275857]
+position = Vector2(238, 0)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="text_1" unique_id=1314558228]
+position = Vector2(-694, -467)
+shape = SubResource("CircleShape2D_uuqmu")
+
+[node name="text_2" type="Area2D" parent="." unique_id=2021007490]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="text_2" unique_id=1714985731]
+position = Vector2(487, -466)
+shape = SubResource("CircleShape2D_3vgto")
+
+[node name="text_3" type="Area2D" parent="." unique_id=314207528]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="text_3" unique_id=216039630]
+position = Vector2(886, 0)
+shape = SubResource("CircleShape2D_fiix4")
+
+[node name="text_4" type="Area2D" parent="." unique_id=1605842171]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="text_4" unique_id=146931664]
+position = Vector2(486, 459)
+shape = SubResource("CircleShape2D_o135m")
+
+[node name="text_5" type="Area2D" parent="." unique_id=349126709]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="text_5" unique_id=61961950]
+position = Vector2(-454, 469)
+shape = SubResource("CircleShape2D_87cqv")
+
+[node name="center_ruin" type="Area2D" parent="." unique_id=1447653157]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="center_ruin" unique_id=1452148014]
+rotation = -1.5707964
+scale = Vector2(10, 10)
+texture = ExtResource("6_bg34n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center_ruin" unique_id=196613428]
+shape = SubResource("CircleShape2D_yncx4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1994754294]
+position = Vector2(-270.00003, -50.000004)
+scale = Vector2(10, 10)
+texture = ExtResource("7_txrf6")
+
+[node name="item_info_popup3" parent="." unique_id=971349666 instance=ExtResource("5_avbm7")]
+position = Vector2(924, -1)
+
+[node name="item_info_popup4" parent="." unique_id=436837505 instance=ExtResource("5_avbm7")]
+position = Vector2(486, 503)
+
+[node name="item_info_popup5" parent="." unique_id=2117564016 instance=ExtResource("5_avbm7")]
+position = Vector2(-454, 504)
+
+[node name="item_info_popup" parent="." unique_id=266295725 instance=ExtResource("5_avbm7")]
+position = Vector2(-456, -503)
+
+[node name="item_info_popup2" parent="." unique_id=1380189786 instance=ExtResource("5_avbm7")]
+position = Vector2(488, -504)
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_m5wph")]
+position = Vector2(-861, -115.00001)
+scale = Vector2(7, 7)
+
+[node name="info_tomb_color" type="ColorRect" parent="." unique_id=2066196927]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="info_tomb_label" type="Label" parent="." unique_id=222315566]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("8_25m4w")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="room_4_2" to="room_4_2" method="_on_body_entered"]
+[connection signal="area_entered" from="text_1" to="." method="_on_text_1_area_entered"]
+[connection signal="area_entered" from="text_2" to="." method="_on_text_2_area_entered"]
+[connection signal="area_entered" from="text_3" to="." method="_on_text_3_area_entered"]
+[connection signal="area_entered" from="text_4" to="." method="_on_text_4_area_entered"]
+[connection signal="area_entered" from="text_5" to="." method="_on_text_5_area_entered"]
+[connection signal="area_entered" from="center_ruin" to="." method="_on_center_ruin_area_entered"]
