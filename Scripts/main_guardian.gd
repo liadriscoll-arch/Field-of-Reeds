@@ -11,8 +11,8 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if Global.main_name_known and body.name == "Pharaoh":
 			Global.current_guardian_guess = 1
-			Global.room_2_position = Vector2(body.position.x, body.position.y+10)
-			#get_tree().change_scene_to_file("res://Scenes/x.tscn")
+			Global.room_2_position = Vector2(body.position.x, body.position.y + 20)
+			get_tree().change_scene_to_file("res://Scenes/guardian_guess_screen.tscn")
 			Global.canmove = false
 	elif pharaoh.position.y <= -400:
 		info_tomb_color.visible = true

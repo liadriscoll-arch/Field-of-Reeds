@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		info_tomb_label.visible = false
 		return
  
-	Global.room_2_position = Vector2(body.position.x + 10, body.position.y)
+	Global.room_2_position = Vector2(body.position.x + 20, body.position.y)
 	if Global.guardian_3_guessed:
 		get_tree().change_scene_to_file("res://Scenes/room_3.tscn")
 	else:

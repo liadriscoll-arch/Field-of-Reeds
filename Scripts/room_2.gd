@@ -96,9 +96,13 @@ func _on_ruin_8_area_area_entered(area: Area2D) -> void:
 			if Input.is_action_pressed("ui_accept"):
 				info_tomb_color.visible = true
 				info_tomb_label.visible = true
-				info_tomb_label.add_theme_font_size_override("font_size", 40)
-				info_tomb_label.text = "A broken brick in the rubble leaves half a spell to find\nthe name of the door guardian"
-				Global.brick_found = true
+				if Global.brick_found:
+					info_tomb_label.add_theme_font_size_override("font_size", 100)
+					info_tomb_label.text = "Nothing here"
+				else:
+					info_tomb_label.add_theme_font_size_override("font_size", 40)
+					info_tomb_label.text = "A broken brick in the rubble leaves half a spell to find\nthe name of the door guardian"
+					Global.brick_found = true
 				await get_tree().create_timer(4).timeout
 				info_tomb_color.visible = false
 				info_tomb_label.text = ""
