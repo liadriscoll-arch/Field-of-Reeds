@@ -24,5 +24,4 @@ func _on_body_entered(body: Node2D) -> void:
 	if Global.guardian_3_guessed:
 		get_tree().change_scene_to_file("res://Scenes/room_3.tscn")
 	else:
-		Global.current_guardian_guess = 3
-		get_tree().change_scene_to_file("res://Scenes/guardian_guess_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/type_guardian_guess.tscn")

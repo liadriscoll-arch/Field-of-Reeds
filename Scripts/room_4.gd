@@ -7,6 +7,7 @@ func _ready() -> void:
 	info_tomb_label.visible = false
 	info_tomb_color.visible = false
 	info_tomb_label.text = ""
+	Global.g3_name_known = true
 
 
 func _on_center_ruin_area_entered(area: Area2D) -> void:

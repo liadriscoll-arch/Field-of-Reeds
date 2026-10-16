@@ -1,0 +1,425 @@
+[gd_scene format=3 uid="uid://57y6opc3wblr"]
+
+[ext_resource type="Script" uid="uid://c8knddcqcqat0" path="res://type_guardian_guess.gd" id="1_hwc4y"]
+[ext_resource type="Texture2D" uid="uid://dej5y4liaqcno" path="res://Assets/2_bg_reeds.png" id="2_yxkv3"]
+[ext_resource type="Texture2D" uid="uid://c6p0oppbdmbeg" path="res://Assets/reeds_ruin2.png" id="3_uhyu1"]
+[ext_resource type="Texture2D" uid="uid://cwylthau66gmw" path="res://Assets/reeds_ruin3.png" id="4_bqm7y"]
+[ext_resource type="Texture2D" uid="uid://bwfj7ohxjpbmj" path="res://Assets/reeds_guardian.png" id="5_ha75s"]
+[ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="6_5xc6b"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="7_yxkv3"]
+
+[node name="type_guardian_guess" type="Node2D" unique_id=994137733]
+script = ExtResource("1_hwc4y")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1448691504]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=484943895]
+scale = Vector2(10, 10)
+texture = ExtResource("2_yxkv3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=460034309]
+position = Vector2(-748.99994, 412.99997)
+scale = Vector2(5, 5)
+texture = ExtResource("3_uhyu1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1551013845]
+position = Vector2(417, 252.99998)
+rotation = 1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("3_uhyu1")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=223306303]
+position = Vector2(249.00003, -105.000015)
+rotation = 3.1415927
+scale = Vector2(5, 5)
+texture = ExtResource("3_uhyu1")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1373100306]
+position = Vector2(-604.00006, -26.999992)
+rotation = -1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("3_uhyu1")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=940707895]
+position = Vector2(709, -345.00003)
+scale = Vector2(5, 5)
+texture = ExtResource("4_bqm7y")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1838225047]
+position = Vector2(-167, 78.999985)
+rotation = 1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("4_bqm7y")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=528477539]
+position = Vector2(853.99994, -258.99997)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("5_ha75s")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=555033234]
+position = Vector2(-822.99994, -261)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("5_ha75s")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=851178636]
+position = Vector2(245.99998, -393)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("5_ha75s")
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("6_5xc6b")]
+position = Vector2(-3.000001, 255.99997)
+scale = Vector2(7, 7)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=308414715]
+offset_left = -1044.0
+offset_top = -609.0
+offset_right = 1049.0
+offset_bottom = 721.0
+color = Color(0, 0, 0, 0.7137255)
+
+[node name="Label" type="Label" parent="." unique_id=1401115302]
+offset_left = -958.0
+offset_top = -541.0
+offset_right = 963.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "WHAT IS MY NAME?"
+horizontal_alignment = 1
+
+[node name="q" type="Button" parent="." unique_id=562038056]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -835.0
+offset_top = -360.0
+offset_right = -675.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "q"
+
+[node name="w" type="Button" parent="." unique_id=1508928018]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -665.0
+offset_top = -360.0
+offset_right = -505.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "w"
+
+[node name="e" type="Button" parent="." unique_id=74668387]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -495.0
+offset_top = -360.0
+offset_right = -335.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "e"
+
+[node name="r" type="Button" parent="." unique_id=51086697]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -325.0
+offset_top = -360.0
+offset_right = -165.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "r"
+
+[node name="t" type="Button" parent="." unique_id=113107180]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -155.0
+offset_top = -360.0
+offset_right = 5.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "t"
+
+[node name="y" type="Button" parent="." unique_id=681401699]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 15.0
+offset_top = -360.0
+offset_right = 175.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "y"
+
+[node name="u" type="Button" parent="." unique_id=412578578]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 185.0
+offset_top = -360.0
+offset_right = 345.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "u"
+
+[node name="i" type="Button" parent="." unique_id=2126889140]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 355.0
+offset_top = -360.0
+offset_right = 515.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "i"
+
+[node name="o" type="Button" parent="." unique_id=1973709572]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 525.0
+offset_top = -360.0
+offset_right = 685.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "o"
+
+[node name="p" type="Button" parent="." unique_id=812527876]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 695.0
+offset_top = -360.0
+offset_right = 855.0
+offset_bottom = -160.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "p"
+
+[node name="a" type="Button" parent="." unique_id=100193473]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -759.0
+offset_top = -127.0
+offset_right = -599.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "a"
+
+[node name="s" type="Button" parent="." unique_id=2064832485]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -589.0
+offset_top = -127.0
+offset_right = -429.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "s"
+
+[node name="d" type="Button" parent="." unique_id=996789766]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -419.0
+offset_top = -127.0
+offset_right = -259.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "d"
+
+[node name="f" type="Button" parent="." unique_id=1613873359]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -249.0
+offset_top = -127.0
+offset_right = -89.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "f"
+
+[node name="g" type="Button" parent="." unique_id=1479515141]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -79.0
+offset_top = -127.0
+offset_right = 81.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "g"
+
+[node name="h" type="Button" parent="." unique_id=365910572]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 91.0
+offset_top = -127.0
+offset_right = 251.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "h"
+
+[node name="j" type="Button" parent="." unique_id=1853096174]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 261.0
+offset_top = -127.0
+offset_right = 421.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "j"
+
+[node name="k" type="Button" parent="." unique_id=15360306]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 431.0
+offset_top = -127.0
+offset_right = 591.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "k"
+
+[node name="l" type="Button" parent="." unique_id=919396955]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 601.0
+offset_top = -127.0
+offset_right = 761.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "l"
+
+[node name="z" type="Button" parent="." unique_id=372170082]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -759.0
+offset_top = 106.0
+offset_right = -599.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "z"
+
+[node name="x" type="Button" parent="." unique_id=396757652]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -589.0
+offset_top = 106.0
+offset_right = -429.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "x"
+
+[node name="c" type="Button" parent="." unique_id=402045227]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -419.0
+offset_top = 106.0
+offset_right = -259.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "c"
+
+[node name="v" type="Button" parent="." unique_id=663484143]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -249.0
+offset_top = 106.0
+offset_right = -89.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "v"
+
+[node name="b" type="Button" parent="." unique_id=1008042972]
+custom_maximum_size = Vector2(160, 200)
+offset_left = -79.0
+offset_top = 106.0
+offset_right = 81.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "b"
+
+[node name="n" type="Button" parent="." unique_id=302021323]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 91.0
+offset_top = 106.0
+offset_right = 251.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "n"
+
+[node name="m" type="Button" parent="." unique_id=186130808]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 261.0
+offset_top = 106.0
+offset_right = 421.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "m"
+
+[node name="-" type="Button" parent="." unique_id=1302381979]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 431.0
+offset_top = 106.0
+offset_right = 591.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 100
+text = "-"
+
+[node name="backspace" type="Button" parent="." unique_id=955451889]
+custom_maximum_size = Vector2(160, 200)
+offset_left = 601.0
+offset_top = 106.0
+offset_right = 761.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 50
+text = "Back
+Space"
+
+[node name="enter_button" type="Button" parent="." unique_id=581638582]
+offset_left = 219.0
+offset_top = 325.0
+offset_right = 781.0
+offset_bottom = 480.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 75
+text = "Enter"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=505052160]
+offset_left = -808.0
+offset_top = 322.0
+offset_right = -1.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 0.7137255)
+
+[node name="typed_label" type="Label" parent="." unique_id=86916584]
+offset_left = -807.0
+offset_top = 322.0
+offset_right = -2.0
+offset_bottom = 482.0
+theme_override_fonts/font = ExtResource("7_yxkv3")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="q" to="." method="_on_q_pressed"]
+[connection signal="pressed" from="w" to="." method="_on_w_pressed"]
+[connection signal="pressed" from="e" to="." method="_on_e_pressed"]
+[connection signal="pressed" from="r" to="." method="_on_r_pressed"]
+[connection signal="pressed" from="t" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="y" to="." method="_on_y_pressed"]
+[connection signal="pressed" from="u" to="." method="_on_u_pressed"]
+[connection signal="pressed" from="i" to="." method="_on_i_pressed"]
+[connection signal="pressed" from="o" to="." method="_on_o_pressed"]
+[connection signal="pressed" from="p" to="." method="_on_p_pressed"]
+[connection signal="pressed" from="a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="s" to="." method="_on_s_pressed"]
+[connection signal="pressed" from="d" to="." method="_on_d_pressed"]
+[connection signal="pressed" from="f" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="g" to="." method="_on_g_pressed"]
+[connection signal="pressed" from="h" to="." method="_on_h_pressed"]
+[connection signal="pressed" from="j" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="k" to="." method="_on_k_pressed"]
+[connection signal="pressed" from="l" to="." method="_on_l_pressed"]
+[connection signal="pressed" from="z" to="." method="_on_z_pressed"]
+[connection signal="pressed" from="x" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="c" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="v" to="." method="_on_v_pressed"]
+[connection signal="pressed" from="b" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="n" to="." method="_on_n_pressed"]
+[connection signal="pressed" from="m" to="." method="_on_m_pressed"]
+[connection signal="pressed" from="-" to="." method="_on__pressed"]
+[connection signal="pressed" from="backspace" to="." method="_on_backspace_pressed"]
+[connection signal="pressed" from="enter_button" to="." method="_on_enter_button_pressed"]
