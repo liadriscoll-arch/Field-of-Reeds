@@ -6,6 +6,9 @@ extends Node2D
 
 func _ready() -> void:
 	$Pharaoh.position = Global.room_3_position
+	info_tomb_color.visible = false
+	info_tomb_label.visible = false
+	info_tomb_label.text = ""
 
 
 func _on_ruin_3_1_area_entered(area: Area2D) -> void:
