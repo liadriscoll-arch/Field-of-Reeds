@@ -4,9 +4,24 @@
 [ext_resource type="Script" uid="uid://dd5tkvuotyayt" path="res://Scripts/room_3.gd" id="1_ac5qk"]
 [ext_resource type="PackedScene" uid="uid://4xhl2tjonoss" path="res://Scenes/pharaoh.tscn" id="2_ofmjs"]
 [ext_resource type="Script" uid="uid://crvgshderddxv" path="res://Scripts/leave_3.gd" id="4_u5i04"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="5_3aelw"]
+[ext_resource type="Texture2D" uid="uid://drsjaonecgnwe" path="res://Assets/reeds_ruin_4.png" id="6_rxq7n"]
+[ext_resource type="PackedScene" uid="uid://cdu1u6d1hqgl2" path="res://Scenes/item_info_popup.tscn" id="7_rxq7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqmu"]
 size = Vector2(20, 133)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuqmu"]
+radius = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vgto"]
+radius = 83.48653
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fiix4"]
+radius = 83.00603
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o135m"]
+radius = 86.0
 
 [node name="room_3" type="Node2D" unique_id=1167190826]
 script = ExtResource("1_ac5qk")
@@ -16,10 +31,6 @@ script = ExtResource("1_ac5qk")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=985034071]
 scale = Vector2(10, 10)
 texture = ExtResource("1_1aiob")
-
-[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_ofmjs")]
-position = Vector2(857, -115)
-scale = Vector2(7, 7)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1976421739]
 
@@ -34,4 +45,95 @@ script = ExtResource("4_u5i04")
 position = Vector2(950, -6.5)
 shape = SubResource("RectangleShape2D_uuqmu")
 
+[node name="ruin3_1" type="Area2D" parent="." unique_id=637439992]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="ruin3_1" unique_id=1826833902]
+position = Vector2(235, -97.999985)
+scale = Vector2(5, 5)
+texture = ExtResource("6_rxq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ruin3_1" unique_id=401270894]
+position = Vector2(241, -96)
+shape = SubResource("CircleShape2D_uuqmu")
+
+[node name="ruin3_2" type="Area2D" parent="." unique_id=197869147]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="ruin3_2" unique_id=808702150]
+position = Vector2(-305.00006, 223)
+rotation = 1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("6_rxq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ruin3_2" unique_id=993158470]
+position = Vector2(-309, 227)
+shape = SubResource("CircleShape2D_3vgto")
+
+[node name="ruin3_3" type="Area2D" parent="." unique_id=1325366568]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="ruin3_3" unique_id=321492732]
+position = Vector2(678.99994, -382.00003)
+rotation = 3.1415927
+scale = Vector2(5, 5)
+texture = ExtResource("6_rxq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ruin3_3" unique_id=2005480009]
+position = Vector2(674, -382)
+shape = SubResource("CircleShape2D_fiix4")
+
+[node name="ruin3_4" type="Area2D" parent="." unique_id=81096198]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="ruin3_4" unique_id=5616451]
+position = Vector2(-640, -177.99998)
+rotation = -1.5707964
+scale = Vector2(5, 5)
+texture = ExtResource("6_rxq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ruin3_4" unique_id=1318808368]
+position = Vector2(-640, -183)
+shape = SubResource("CircleShape2D_o135m")
+
+[node name="item_info_popup" parent="." unique_id=266295725 instance=ExtResource("7_rxq7n")]
+position = Vector2(-641, -183)
+
+[node name="item_info_popup2" parent="." unique_id=1568496609 instance=ExtResource("7_rxq7n")]
+position = Vector2(-309, 227)
+
+[node name="item_info_popup3" parent="." unique_id=206462217 instance=ExtResource("7_rxq7n")]
+position = Vector2(241, -96)
+
+[node name="item_info_popup4" parent="." unique_id=1356507494 instance=ExtResource("7_rxq7n")]
+position = Vector2(674, -382)
+
+[node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_ofmjs")]
+position = Vector2(857, -115)
+scale = Vector2(7, 7)
+
+[node name="info_tomb_color" type="ColorRect" parent="." unique_id=793056374]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="info_tomb_label" type="Label" parent="." unique_id=662611535]
+offset_left = -601.0
+offset_top = 332.0
+offset_right = 590.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("5_3aelw")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="leave_3" to="leave_3" method="_on_body_entered"]
+[connection signal="area_entered" from="ruin3_1" to="." method="_on_ruin_3_1_area_entered"]
+[connection signal="area_entered" from="ruin3_2" to="." method="_on_ruin_3_2_area_entered"]
+[connection signal="area_entered" from="ruin3_3" to="." method="_on_ruin_3_3_area_entered"]
+[connection signal="area_entered" from="ruin3_4" to="." method="_on_ruin_3_4_area_entered"]

@@ -12,6 +12,7 @@ func _ready() -> void:
 	info_tomb_label.visible = false
 	$Pharaoh.position = Global.room_2_position
 	sprite_2d_4.flip_h = true
+	
 
 
 
@@ -30,7 +31,7 @@ func _on_wall_area_area_entered(area: Area2D) -> void:
 					await get_tree().create_timer(4).timeout
 					
 				elif Global.brick_found:
-					info_tomb_label.add_theme_font_size_override("font_size", 55)
+					info_tomb_label.add_theme_font_size_override("font_size", 50)
 					info_tomb_label.text = "You place the brick to find the name:\n" + Global.guardian_2
 					Global.g2_name_known = true 
 					await get_tree().create_timer(4).timeout

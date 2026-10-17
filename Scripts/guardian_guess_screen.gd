@@ -45,6 +45,7 @@ func check_answer(chosen: int) -> void:
 		label.text = "CORRECT!"
 		if Global.current_guardian_guess == 1:
 			get_tree().change_scene_to_file("res://Scenes/judgement.tscn")
+			return
 		
 		elif Global.current_guardian_guess == 2:
 			Global.guardian_2_guessed = true

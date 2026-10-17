@@ -25,13 +25,13 @@ func _on_backspace_pressed() -> void:
 func _on_enter_button_pressed() -> void:
 
 	if typed.to_lower() == Global.guardian_3.to_lower():
-		label.text = "Correct!"
+		label.text = "CORRECT!"
 		Global.guardian_3_guessed = true
 		await get_tree().create_timer(2).timeout
 		Global.canmove = true
 		get_tree().change_scene_to_file("res://Scenes/room_3.tscn")
 	else:
-		label.text = "Wrong"
+		label.text = "WRONG!"
 		await get_tree().create_timer(2).timeout
 		Global.canmove = true
 		get_tree().change_scene_to_file("res://Scenes/room_2.tscn")

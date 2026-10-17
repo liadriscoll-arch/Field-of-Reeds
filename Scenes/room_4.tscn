@@ -124,6 +124,9 @@ position = Vector2(-456, -503)
 [node name="item_info_popup2" parent="." unique_id=1380189786 instance=ExtResource("5_avbm7")]
 position = Vector2(488, -504)
 
+[node name="item_info_popup6" parent="." unique_id=905864310 instance=ExtResource("5_avbm7")]
+scale = Vector2(1.5, 1.5)
+
 [node name="Pharaoh" parent="." unique_id=1218117142 instance=ExtResource("2_m5wph")]
 position = Vector2(-861, -115.00001)
 scale = Vector2(7, 7)
