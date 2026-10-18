@@ -59,7 +59,7 @@ func _on_text_1_area_entered(area: Area2D) -> void:
 				info_tomb_color.visible = true
 				info_tomb_label.visible = true
 				info_tomb_label.add_theme_font_size_override("font_size", 30)
-				info_tomb_label.text = "text left from a previous traveler:\n spaces are like a dash in time, the start of 1 word to another"
+				info_tomb_label.text = "text left from a previous traveler:\n Breaks are like a dash in time, the start of 1 word to another"
 				await get_tree().create_timer(6).timeout
 				info_tomb_color.visible = false
 				info_tomb_label.text = ""
@@ -75,61 +75,61 @@ func _on_text_2_area_entered(area: Area2D) -> void:
 				info_tomb_label.visible = true
 				info_tomb_label.add_theme_font_size_override("font_size", 30)
 				if Global.guardian_3 == "Sekhet-hra-asht-aru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred egyptian knowledge hides every tomb "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred Egyptian Knowledge Hides Every Tomb "
 					
 				elif Global.guardian_3 == "Meti-heh":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mighty eternal travelers ... immortality  "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mighty Eternal Travelers ... Immortality  "
 				
 				elif Global.guardian_3 == "Ha-kheru":
 					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Anubis "
 					
 				elif Global.guardian_3 == "Un-hat":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Underworld navigation "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Underworld Navigation "
 					
 				elif Global.guardian_3 == "Seqe-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Secret eternal questions emerge "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Secret Eternal Questions Emerge "
 					
 				elif Global.guardian_3 == "Uset":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Underworld spirits enter through "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Underworld Spirits Enter Through "
 				
 				elif Global.guardian_3 == "Se-res-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Secrets enter "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Secrets Enter "
 					
 				elif Global.guardian_3 == "Aaa":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis awaits answers "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis Awaits Answers "
 				
 				elif Global.guardian_3 == "Khesef-hra-asht-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Knowledge helps every soul enter forever "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Knowledge Helps Every Soul Enter Forever "
 					
 				elif Global.guardian_3 == "Seres-tepu":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred eternal rituals ensure survival "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred Eternal Rituals Ensure Survival "
 					
 				elif Global.guardian_3 == "Ankh-f-em-fent":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient names keep history "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient Names Keep History "
 					
 				elif Global.guardian_3 == "Shabu":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Souls have afterlife blessings ... unknown  "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Souls Have Afterlife Blessings ... Unknown  "
 					
 				elif Global.guardian_3 == "Teb-hra-keha-kheft":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Tombs enclose bodies "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Tombs Enclose Bodies "
 					
 				elif Global.guardian_3 == "Atek-au-kehaq-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient temples entomb kings "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient Temples Entomb Kings "
 					
 				elif Global.guardian_3 == "An-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Afterlife navigation "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Afterlife Navigation "
 					
 				elif Global.guardian_3 == "Ates-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient tombs enclose secrets "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient Tombs Enclose Secrets "
 					
 				elif Global.guardian_3 == "Sekhem-Mafenu-sen":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred eternal knowledge hides every mystery "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Sacred Eternal Knowledge Hides Every Mystery "
 					
 				elif Global.guardian_3 == "Aa-maa-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis awaits "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis Awaits "
 					
 				elif Global.guardian_3 == "Khesef-khemi":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Knowledge helps every soul enter forever  "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Knowledge Helps Every Soul Enter Forever  "
 				
 				
 				await get_tree().create_timer(6).timeout
@@ -147,34 +147,34 @@ func _on_text_3_area_entered(area: Area2D) -> void:
 				info_tomb_label.visible = true
 				info_tomb_label.add_theme_font_size_override("font_size", 30)
 				if Global.guardian_3 == "Sekhet-hra-asht-aru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Meti-heh":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor eternal horus "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Eternal Horus "
 				
 				elif Global.guardian_3 == "Ha-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal riches underground "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Riches Underground "
 					
 				elif Global.guardian_3 == "Un-hat":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor ancient thoughts "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ancient Thoughts "
 					
 				elif Global.guardian_3 == "Seqe-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always"
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always"
 					
 				elif Global.guardian_3 == "Uset":
 					info_tomb_label.text = "The text is unreadable"
 				
 				elif Global.guardian_3 == "Se-res-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Reeds enclose secrets "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Reeds Enclose Secrets "
 					
 				elif Global.guardian_3 == "Aaa":
 					info_tomb_label.text = "The text is unreadable"
 				
 				elif Global.guardian_3 == "Khesef-hra-asht-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Seres-tepu":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Tombs eternally protect underworld "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Tombs Eternally Protect ... Underworld "
 					
 				elif Global.guardian_3 == "Ankh-f-em-fent":
 					info_tomb_label.text = "On the wall you find partially destroyed text:\n Fate "
@@ -183,25 +183,25 @@ func _on_text_3_area_entered(area: Area2D) -> void:
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Teb-hra-keha-kheft":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Atek-au-kehaq-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis understands "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis Understands "
 					
 				elif Global.guardian_3 == "An-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Ates-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Sekhem-Mafenu-sen":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mummies await ... final eternal night underworld "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mummies Await ... Final Eternal Night Underworld "
 					
 				elif Global.guardian_3 == "Aa-maa-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mighty ancient amulets ... "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Mighty Ancient Amulets ... "
 					
 				elif Global.guardian_3 == "Khesef-khemi":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal memories in "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Memories In "
 					
 				await get_tree().create_timer(6).timeout
 				info_tomb_color.visible = false
@@ -218,7 +218,7 @@ func _on_text_4_area_entered(area: Area2D) -> void:
 				info_tomb_label.visible = true
 				info_tomb_label.add_theme_font_size_override("font_size", 30)
 				if Global.guardian_3 == "Sekhet-hra-asht-aru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient secrets hide treasures "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient Secrets Hide Treasures "
 					
 				elif Global.guardian_3 == "Meti-heh":
 					info_tomb_label.text = "The text is unreadable"
@@ -236,28 +236,28 @@ func _on_text_4_area_entered(area: Area2D) -> void:
 					info_tomb_label.text = "The text is unreadable"
 				
 				elif Global.guardian_3 == "Se-res-hra":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor ra always "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Honor Ra Always "
 					
 				elif Global.guardian_3 == "Aaa":
 					info_tomb_label.text = "The text is unreadable"
 				
 				elif Global.guardian_3 == "Khesef-hra-asht-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient secrets hide treasures "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Ancient Secrets Hide Treasures "
 					
 				elif Global.guardian_3 == "Seres-tepu":
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Ankh-f-em-fent":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Eternal memories "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Eternal Memories "
 					
 				elif Global.guardian_3 == "Shabu":
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Teb-hra-keha-kheft":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Keep evil hidden away "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Keep Evil Hidden Away "
 					
 				elif Global.guardian_3 == "Atek-au-kehaq-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Keep evil hidden away quietly "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Keep Evil Hidden Away Quietly "
 					
 				elif Global.guardian_3 == "An-hra":
 					info_tomb_label.text = "The text is unreadable"
@@ -266,10 +266,10 @@ func _on_text_4_area_entered(area: Area2D) -> void:
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Sekhem-Mafenu-sen":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Spirits enter nile "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Spirits Enter ... Nile "
 					
 				elif Global.guardian_3 == "Aa-maa-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal riches underground "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Riches Underground "
 					
 				elif Global.guardian_3 == "Khesef-khemi":
 					info_tomb_label.text = "The text is unreadable"
@@ -290,7 +290,7 @@ func _on_text_5_area_entered(area: Area2D) -> void:
 				info_tomb_label.add_theme_font_size_override("font_size", 30)
 				
 				if Global.guardian_3 == "Sekhet-hra-asht-aru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis rules underworld "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Anubis Rules Underworld "
 					
 				elif Global.guardian_3 == "Meti-heh":
 					info_tomb_label.text = "The text is unreadable"
@@ -314,22 +314,22 @@ func _on_text_5_area_entered(area: Area2D) -> void:
 					info_tomb_label.text = "The text is unreadable"
 				
 				elif Global.guardian_3 == "Khesef-hra-asht-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal riches underground "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Riches Underground "
 					
 				elif Global.guardian_3 == "Seres-tepu":
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Ankh-f-em-fent":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Fearless eternal navigators travel "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Fearless Eternal Navigators Travel "
 					
 				elif Global.guardian_3 == "Shabu":
 					info_tomb_label.text = "The text is unreadable"
 					
 				elif Global.guardian_3 == "Teb-hra-keha-kheft":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal fancy treasures "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Fancy Treasures "
 					
 				elif Global.guardian_3 == "Atek-au-kehaq-kheru":
-					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings hold eternal riches underground "
+					info_tomb_label.text = "On the wall you find partially destroyed text:\n Kings Hold Eternal Riches Underground "
 					
 				elif Global.guardian_3 == "An-hra":
 					info_tomb_label.text = "The text is unreadable"
