@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://d05yhsc1yj307"]
 
 [ext_resource type="Texture2D" uid="uid://3cp0ly0ijywx" path="res://Assets/reeds-start-bg.png" id="1_h8rug"]
+[ext_resource type="Script" uid="uid://215yhohljmec" path="res://Scripts/controls_screen.gd" id="1_vd22l"]
 [ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="2_vd22l"]
 [ext_resource type="Script" uid="uid://cpxis8vmjv61i" path="res://Scripts/start_game_button.gd" id="3_o5fkp"]
 
 [node name="controls_screen" type="Node2D" unique_id=307054295]
+script = ExtResource("1_vd22l")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1333568746]
 
@@ -38,7 +40,10 @@ theme_override_fonts/font = ExtResource("2_vd22l")
 theme_override_font_sizes/font_size = 75
 text = "Controls:
 WASD or arrow keys to move
+
 SPACE to interact
+
+Esc to quit
 "
 horizontal_alignment = 1
 

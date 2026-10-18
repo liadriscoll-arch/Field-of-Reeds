@@ -1,9 +1,9 @@
 extends Node
 
 
-var hours_spent = 12.5
+var hours_spent = "way too long"
 var canmove = true
-var gate_guardians = ["Sekhet-hra-asht-aru","Meti-heh","Ha-kheru","Un-hat","Seqe-hra","Uset","Qeq-hauau-ent-pehui","Se-res-hra","Aaa","Khesef-hra-asht-kheru","Seres-tepu","Ankh-f-em-fent","Shabu","Teb-hra-keha-kheft","Atek-au-kehaq-kheru","An-hra","Ates-hra","Sekhem-Mafenu-sen","Aa-maa-kheru","Khesef-khemi"]
+var gate_guardians = ["Sekhet-hra-asht-aru","Meti-heh","Ha-kheru","Un-hat","Seqe-hra","Uset","Se-res-hra","Aaa","Khesef-hra-asht-kheru","Seres-tepu","Ankh-f-em-fent","Shabu","Teb-hra-keha-kheft","Atek-au-kehaq-kheru","An-hra","Ates-hra","Sekhem-Mafenu-sen","Aa-maa-kheru","Khesef-khemi"]
 var main_guardian
 var guardian_2
 var guardian_3
@@ -35,3 +35,7 @@ func _ready() -> void:
 	print(main_guardian)
 	print(guardian_2)
 	print(guardian_3)
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()

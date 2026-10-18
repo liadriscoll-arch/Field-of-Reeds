@@ -7,6 +7,7 @@ extends Node2D
 var typed = ""
 
 func _ready() -> void:
+	music.play_music_game()
 	Global.canmove = false
 	pharaoh.position = Global.room_2_position
 	label.text = "WHAT IS MY NAME?"

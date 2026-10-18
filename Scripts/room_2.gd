@@ -8,6 +8,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	music.play_music_game()
 	info_tomb_color.visible = false
 	info_tomb_label.visible = false
 	$Pharaoh.position = Global.room_2_position

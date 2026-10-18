@@ -11,6 +11,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	music.play_music_game()
 	pharaoh.position = Global.tomb_room_position
 	info_tomb_label.visible = false
 	info_tomb_color.visible = false

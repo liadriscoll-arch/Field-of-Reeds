@@ -1,5 +1,40 @@
 [gd_scene format=3 uid="uid://bht7v4v8lfs6n"]
 
-[node name="judgement" type="Node2D" unique_id=156092096]
+[ext_resource type="Script" uid="uid://u73yiilj8vn" path="res://Scripts/judgement.gd" id="1_cy304"]
+[ext_resource type="Texture2D" uid="uid://vk2kdvv1basx" path="res://Assets/reeds_scale.png" id="2_cdc8j"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="3_f2dnh"]
 
-[node name="Camera2D2" type="Camera2D" parent="." unique_id=137418808]
+[node name="judgement" type="Node2D" unique_id=156092096]
+script = ExtResource("1_cy304")
+
+[node name="bg_color" type="ColorRect" parent="." unique_id=1000913763]
+offset_left = -1128.0
+offset_top = -648.0
+offset_right = 1032.0
+offset_bottom = 592.0
+color = Color(0.7254902, 0.7019608, 0.6, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315640202]
+scale = Vector2(20, 20)
+texture = ExtResource("2_cdc8j")
+
+[node name="start_color" type="ColorRect" parent="." unique_id=100570790]
+offset_left = -1187.0
+offset_top = -719.0
+offset_right = 1092.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 0.65882355)
+
+[node name="Label" type="Label" parent="." unique_id=1276087718]
+offset_left = -959.0
+offset_top = -540.0
+offset_right = 959.0
+offset_bottom = -259.0
+theme_override_fonts/font = ExtResource("3_f2dnh")
+theme_override_font_sizes/font_size = 40
+text = "Welcome to your judgement. Your heart will be weighed against the feather of Ma'at.
+If it weighs more, you will die a second time. 
+If not, you are given access to the Field of Reeds"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1751966891]

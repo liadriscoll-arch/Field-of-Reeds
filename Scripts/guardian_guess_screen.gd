@@ -9,7 +9,7 @@ extends Node2D
 var buttons = []
 var correct_option = 0
 func _ready() -> void:
-	
+	music.play_music_game()
 	pharaoh.position = Global.room_2_position
 	
 	Global.canmove = false

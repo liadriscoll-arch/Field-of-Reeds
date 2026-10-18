@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cufo23ht7ytoh"]
+
+[ext_resource type="AudioStream" uid="uid://c27sl2uwhty2n" path="res://Assets/samuelfjohanns-egypt-expedition-the-kingdom-119123.mp3" id="1_wrh0v"]
+[ext_resource type="Script" uid="uid://d23738bee5l0k" path="res://Scripts/bg_music.gd" id="2_0kug2"]
+
+[node name="bg_music" type="AudioStreamPlayer" unique_id=2009209514]
+stream = ExtResource("1_wrh0v")
+autoplay = true
+script = ExtResource("2_0kug2")

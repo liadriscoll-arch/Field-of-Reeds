@@ -3,6 +3,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	music.play_music_game()
 	Global.canmove = false
 	pharaoh.position = Global.room_4_position
 

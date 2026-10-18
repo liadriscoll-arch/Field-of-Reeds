@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cnlansd6fhvar"]
 
+[ext_resource type="Script" uid="uid://y7p1cqphwah2" path="res://Scripts/start_screen.gd" id="1_5e717"]
 [ext_resource type="Texture2D" uid="uid://3cp0ly0ijywx" path="res://Assets/reeds-start-bg.png" id="1_i8r30"]
 [ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="2_60ddj"]
 [ext_resource type="Script" uid="uid://cbhehoc8gmm5b" path="res://Scripts/start_button.gd" id="3_5e717"]
 
 [node name="start_screen" type="Node2D" unique_id=1034941127]
+script = ExtResource("1_5e717")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1875385613]
 

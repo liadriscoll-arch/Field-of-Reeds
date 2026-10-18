@@ -5,6 +5,7 @@ extends Node2D
 @onready var pharaoh: CharacterBody2D = $Pharaoh
 
 func _ready() -> void:
+	music.play_music_game()
 	$Pharaoh.position = Global.room_3_position
 	info_tomb_color.visible = false
 	info_tomb_label.visible = false

@@ -4,10 +4,10 @@ extends Node2D
 @onready var info_tomb_color: ColorRect = $info_tomb_color
 @onready var info_tomb_label: Label = $info_tomb_label
 @onready var boat: Node2D = $boat
-#testtesttest
 
 
 func _ready() -> void:
+	music.play_music_game()
 	pharaoh.position = Global.room_river_position
 	info_tomb_label.visible = false
 	info_tomb_color.visible = false
