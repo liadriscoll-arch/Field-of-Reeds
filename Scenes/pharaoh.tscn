@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bawinh2p3uyqj" path="res://Sprites/pharoah-front.png" id="2_gvrdv"]
 [ext_resource type="Texture2D" uid="uid://csvfbog0yep2r" path="res://Sprites/def2-pharaoh.png" id="3_kojcx"]
 [ext_resource type="Texture2D" uid="uid://bi5ic20vugwbk" path="res://Sprites/walk_left_left_up.png" id="4_1vmsc"]
-[ext_resource type="Texture2D" uid="uid://bc53a6jqrcrlu" path="res://Sprites/walk_left.png" id="5_tak7s"]
+[ext_resource type="Texture2D" uid="uid://b1iyi16prkvrr" path="res://Sprites/walk_left.png" id="5_tak7s"]
 [ext_resource type="Texture2D" uid="uid://cjx6766ret6yu" path="res://Sprites/walk_left_right_up.png" id="6_tah3h"]
 [ext_resource type="Texture2D" uid="uid://bxrm5n5sciwng" path="res://Sprites/pharoah-back.png" id="7_wd3hk"]
 [ext_resource type="Texture2D" uid="uid://bp065144dmp2n" path="res://Sprites/back_walk1.png" id="8_wvkjr"]
@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkingdown",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -67,21 +67,21 @@ animations = [{
 "texture": ExtResource("10_uiwbt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_gvrdv")
+"texture": ExtResource("3_kojcx")
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_ww4yv")
 }],
 "loop": 1,
 "name": &"walkingup",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kojcx"]
 size = Vector2(15, 33)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uuqmu"]
-radius = 42.54703
+radius = 50.5099
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vgto"]
 radius = 19.5
@@ -91,9 +91,9 @@ script = ExtResource("1_kojcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872805422]
 sprite_frames = SubResource("SpriteFrames_3vgto")
-animation = &"walking"
+animation = &"walkingup"
 autoplay = "default"
-frame_progress = 0.2926992
+frame_progress = 0.6807255
 
 [node name="player_col" type="CollisionShape2D" parent="." unique_id=300721238]
 position = Vector2(0.5, 15.5)

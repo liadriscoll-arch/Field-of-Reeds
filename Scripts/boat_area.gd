@@ -4,6 +4,9 @@ extends Area2D
 
 @onready var pharaoh: CharacterBody2D = $"../../Pharaoh"
 
+@onready var info_tomb_color: ColorRect = $"../../info_tomb_color"
+@onready var info_tomb_label: Label = $"../../info_tomb_label"
+
 const SOUTH_BANK := Vector2(0, 186)
 const NORTH_BANK := Vector2(0, -78)
 
@@ -49,10 +52,21 @@ func _pick_up_boat() -> void:
 
 
 func _ride_boat() -> void:
-	if Global.ship_location == SOUTH_BANK:
-		pharaoh.position = Vector2(0, -470)
-		Global.ship_location = NORTH_BANK
+	if Global.discovered.has("oar"):
+		if Global.ship_location == SOUTH_BANK:
+			pharaoh.position = Vector2(0, -470)
+			Global.ship_location = NORTH_BANK
+		else:
+			pharaoh.position = Vector2(0, 254)
+			Global.ship_location = SOUTH_BANK
+		boat.position = Global.ship_location
 	else:
-		pharaoh.position = Vector2(0, 254)
-		Global.ship_location = SOUTH_BANK
-	boat.position = Global.ship_location
+		info_tomb_color.visible = true
+		info_tomb_label.visible = true
+		info_tomb_label.add_theme_font_size_override("font_size", 70)
+		info_tomb_label.text = "You need a way to row this accross"
+		await get_tree().create_timer(3).timeout
+		info_tomb_color.visible = false
+		info_tomb_label.text = ""
+		info_tomb_label.visible = false
+	await get_tree().process_frame

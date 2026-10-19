@@ -23,13 +23,10 @@ func _physics_process(delta: float) -> void:
 		if xdirection == 0 && ydirection == 0:
 			Pharoah_sprite.play("default")
 		elif xdirection:
-			Pharoah_sprite.stop()
 			Pharoah_sprite.play("walking")
 		elif ydirection == 1:
-			Pharoah_sprite.stop()
 			Pharoah_sprite.play("walkingup")
 		elif ydirection == -1:
-			Pharoah_sprite.stop()
 			Pharoah_sprite.play("walkingdown")
 			
 		if xdirection < 0:

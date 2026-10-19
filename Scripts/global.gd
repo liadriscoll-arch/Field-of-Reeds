@@ -1,6 +1,7 @@
 extends Node
 
 
+
 var hours_spent = "way too long"
 var canmove = true
 var gate_guardians = ["Sekhet-hra-asht-aru","Meti-heh","Ha-kheru","Un-hat","Seqe-hra","Uset","Se-res-hra","Aaa","Khesef-hra-asht-kheru","Seres-tepu","Ankh-f-em-fent","Shabu","Teb-hra-keha-kheft","Atek-au-kehaq-kheru","An-hra","Ates-hra","Sekhem-Mafenu-sen","Aa-maa-kheru","Khesef-khemi"]
@@ -22,6 +23,7 @@ var g3_name_known = false
 var ship_location = Vector2(0,186)
 var brick_found = false
 var worthy
+var previous_scene_path = ""
 
 
 func _ready() -> void:
@@ -38,4 +40,24 @@ func _ready() -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
+		Global.previous_scene_path = get_tree().current_scene.scene_file_path
+		if Global.previous_scene_path == "res://Scenes/tomb_room.tscn":
+			Global.tomb_room_position = $Pharoah.position
+		elif Global.previous_scene_path == "res://Scenes/river_room.tscn":
+			Global.river_room_position = $Pharoah.position
+		elif Global.previous_scene_path == "res://Scenes/room_2.tscn":
+			Global.room_2_position = $Pharoah.position
+		elif Global.previous_scene_path == "res://Scenes/room_4.tscn":
+			Global.room_4_position = $Pharoah.position
+		elif Global.previous_scene_path == "res://Scenes/room_3.tscn":
+			Global.room_3_position = $Pharoah.position
+		else: return
+		
+		get_tree().change_scene_to_file("res://Scenes/pause_screen.tscn")
+
+
+func go_back_to_previous_scene():
+	if Global.previous_scene_path != "":
+		get_tree().change_scene_to_file(Global.previous_scene_path)
+	else:
+		get_tree().change_scene_to_file("res://Scenes/tomb_room.tscn")

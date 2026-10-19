@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cx6bc7jy6kcsy"]
+
+[ext_resource type="Texture2D" uid="uid://3cp0ly0ijywx" path="res://Assets/reeds-start-bg.png" id="1_gkx8r"]
+[ext_resource type="Script" uid="uid://bcl731e2yttld" path="res://Scripts/pause_screen.gd" id="1_un6tb"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="3_rbgr5"]
+
+[node name="pause_screen" type="Node2D" unique_id=108718674]
+script = ExtResource("1_un6tb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1771089254]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=692268738]
+scale = Vector2(10, 10)
+texture = ExtResource("1_gkx8r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=958888041]
+offset_left = -1093.0
+offset_top = -622.0
+offset_right = 1081.0
+offset_bottom = 609.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Quit_button" type="Button" parent="." unique_id=283514031]
+offset_left = 150.0
+offset_top = 250.0
+offset_right = 752.0
+offset_bottom = 427.0
+theme_override_fonts/font = ExtResource("3_rbgr5")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="return_button" type="Button" parent="." unique_id=38052754]
+offset_left = -752.0
+offset_top = 250.0
+offset_right = -150.0
+offset_bottom = 427.0
+theme_override_fonts/font = ExtResource("3_rbgr5")
+theme_override_font_sizes/font_size = 100
+text = "Return"
+
+[connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="return_button" to="." method="_on_return_button_pressed"]
