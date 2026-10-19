@@ -27,10 +27,10 @@ func _physics_process(delta: float) -> void:
 			Pharoah_sprite.play("walking")
 		elif ydirection == 1:
 			Pharoah_sprite.stop()
-			Pharoah_sprite.play("walkingdown")
+			Pharoah_sprite.play("walkingup")
 		elif ydirection == -1:
 			Pharoah_sprite.stop()
-			Pharoah_sprite.play("walkingup")
+			Pharoah_sprite.play("walkingdown")
 			
 		if xdirection < 0:
 			Pharoah_sprite.flip_h = false

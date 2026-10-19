@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://ff2g17742mfn" path="res://Scripts/player.gd" id="1_kojcx"]
 [ext_resource type="Texture2D" uid="uid://bawinh2p3uyqj" path="res://Sprites/pharoah-front.png" id="2_gvrdv"]
 [ext_resource type="Texture2D" uid="uid://csvfbog0yep2r" path="res://Sprites/def2-pharaoh.png" id="3_kojcx"]
+[ext_resource type="Texture2D" uid="uid://bi5ic20vugwbk" path="res://Sprites/walk_left_left_up.png" id="4_1vmsc"]
+[ext_resource type="Texture2D" uid="uid://bc53a6jqrcrlu" path="res://Sprites/walk_left.png" id="5_tak7s"]
+[ext_resource type="Texture2D" uid="uid://cjx6766ret6yu" path="res://Sprites/walk_left_right_up.png" id="6_tah3h"]
+[ext_resource type="Texture2D" uid="uid://bxrm5n5sciwng" path="res://Sprites/pharoah-back.png" id="7_wd3hk"]
+[ext_resource type="Texture2D" uid="uid://bp065144dmp2n" path="res://Sprites/back_walk1.png" id="8_wvkjr"]
+[ext_resource type="Texture2D" uid="uid://csl5bvgdhifk4" path="res://Sprites/back_walk2.png" id="9_gd4yq"]
+[ext_resource type="Texture2D" uid="uid://bhup7xfhnfown" path="res://Sprites/front_walk1.png" id="10_uiwbt"]
+[ext_resource type="Texture2D" uid="uid://chjvxxuxscccb" path="res://Sprites/front_walk2.png" id="11_ww4yv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3vgto"]
 animations = [{
@@ -16,6 +24,57 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tak7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1vmsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tak7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tah3h")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_wd3hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wvkjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wd3hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gd4yq")
+}],
+"loop": 1,
+"name": &"walkingdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gvrdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uiwbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gvrdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ww4yv")
+}],
+"loop": 1,
+"name": &"walkingup",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kojcx"]
@@ -32,8 +91,9 @@ script = ExtResource("1_kojcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872805422]
 sprite_frames = SubResource("SpriteFrames_3vgto")
+animation = &"walking"
 autoplay = "default"
-frame_progress = 0.73269135
+frame_progress = 0.2926992
 
 [node name="player_col" type="CollisionShape2D" parent="." unique_id=300721238]
 position = Vector2(0.5, 15.5)
