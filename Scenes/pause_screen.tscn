@@ -38,6 +38,15 @@ theme_override_fonts/font = ExtResource("3_rbgr5")
 theme_override_font_sizes/font_size = 100
 text = "Return"
 
+[node name="notebook_button" type="Button" parent="." unique_id=37563596]
+offset_left = -301.0
+offset_top = -88.0
+offset_right = 301.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("3_rbgr5")
+theme_override_font_sizes/font_size = 100
+text = "Notebook"
+
 [node name="Label" type="Label" parent="." unique_id=904870888]
 offset_left = -920.0
 offset_top = -500.0
@@ -50,3 +59,4 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="return_button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="notebook_button" to="." method="_on_notebook_button_pressed"]

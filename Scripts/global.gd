@@ -25,6 +25,7 @@ var brick_found = false
 var worthy
 var previous_scene_path = ""
 var notes = ""
+var notes_2 = ""
 
 
 func _ready() -> void:
@@ -41,19 +42,27 @@ func _ready() -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Global.previous_scene_path = get_tree().current_scene.scene_file_path
-		if Global.previous_scene_path == "res://Scenes/tomb_room.tscn":
-			Global.tomb_room_position = $Pharoah.position
-		elif Global.previous_scene_path == "res://Scenes/river_room.tscn":
-			Global.river_room_position = $Pharoah.position
-		elif Global.previous_scene_path == "res://Scenes/room_2.tscn":
-			Global.room_2_position = $Pharoah.position
-		elif Global.previous_scene_path == "res://Scenes/room_4.tscn":
-			Global.room_4_position = $Pharoah.position
-		elif Global.previous_scene_path == "res://Scenes/room_3.tscn":
-			Global.room_3_position = $Pharoah.position
-		else: return
-		
+		var scene = get_tree().current_scene
+		var path = scene.scene_file_path
+		var pharaoh = scene.get_node_or_null("Pharaoh")
+ 
+		if pharaoh == null:
+			return
+ 
+		if path == "res://Scenes/tomb_room.tscn":
+			tomb_room_position = pharaoh.position
+		elif path == "res://Scenes/river_room.tscn":
+			room_river_position = pharaoh.position
+		elif path == "res://Scenes/room_2.tscn":
+			room_2_position = pharaoh.position
+		elif path == "res://Scenes/room_4.tscn":
+			room_4_position = pharaoh.position
+		elif path == "res://Scenes/room_3.tscn":
+			room_3_position = pharaoh.position
+		else:
+			return
+ 
+		previous_scene_path = path
 		get_tree().change_scene_to_file("res://Scenes/pause_screen.tscn")
 
 
