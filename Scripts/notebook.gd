@@ -29,17 +29,13 @@ func is_full(label: Label) -> bool:
 	
 func type_letter(letter: String) -> void:
 	if note_side_2.text == "":
-		# still writing on the first label
 		note_side_1.text = note_side_1.text + letter
 		if is_full(note_side_1):
-			# it didn't fit: take it off and put it on the second label
 			note_side_1.text = remove_last_letter(note_side_1.text)
 			note_side_2.text = letter
 	else:
-		# writing on the second label
 		note_side_2.text = note_side_2.text + letter
 		if is_full(note_side_2):
-			# the second label is full too: take it off, no more typing
 			note_side_2.text = remove_last_letter(note_side_2.text)
 	save_notes()
 	
