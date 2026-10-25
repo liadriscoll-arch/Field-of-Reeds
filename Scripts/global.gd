@@ -24,6 +24,7 @@ var ship_location = Vector2(0,186)
 var brick_found = false
 var worthy
 var previous_scene_path = ""
+var notes = ""
 
 
 func _ready() -> void:

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dd6gcahvf0sgb"]
+
+[ext_resource type="Script" uid="uid://fhs0sgdu3uai" path="res://Scripts/notebook.gd" id="1_gvrn8"]
+[ext_resource type="Texture2D" uid="uid://ydfievq00ymu" path="res://Assets/reeds_notebook.png" id="2_n8bdy"]
+[ext_resource type="FontFile" uid="uid://isri0dibbil8" path="res://Assets/Anubismythicalserif-lxdLy.otf" id="3_g5l6w"]
+
+[node name="notebook" type="Node2D" unique_id=1955794704]
+script = ExtResource("1_gvrn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030558651]
+scale = Vector2(20, 20)
+texture = ExtResource("2_n8bdy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1346662204]
+
+[node name="note_side_1" type="Label" parent="." unique_id=1673264307]
+offset_left = -890.0
+offset_top = -470.0
+offset_right = -65.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource("3_g5l6w")
+theme_override_font_sizes/font_size = 75
+
+[node name="note_side_2" type="Label" parent="." unique_id=1355501946]
+offset_left = 50.0
+offset_top = -470.0
+offset_right = 875.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource("3_g5l6w")
+theme_override_font_sizes/font_size = 75
+
+[node name="Button" type="Button" parent="." unique_id=223112734]
+offset_left = -243.0
+offset_top = 451.0
+offset_right = 243.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_g5l6w")
+theme_override_font_sizes/font_size = 50
+text = "Back"

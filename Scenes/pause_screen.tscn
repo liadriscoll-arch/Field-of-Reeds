@@ -14,10 +14,10 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_gkx8r")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=958888041]
-offset_left = -1093.0
-offset_top = -622.0
-offset_right = 1081.0
-offset_bottom = 609.0
+offset_left = -1086.0
+offset_top = -621.0
+offset_right = 1088.0
+offset_bottom = 610.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="Quit_button" type="Button" parent="." unique_id=283514031]
@@ -37,6 +37,16 @@ offset_bottom = 427.0
 theme_override_fonts/font = ExtResource("3_rbgr5")
 theme_override_font_sizes/font_size = 100
 text = "Return"
+
+[node name="Label" type="Label" parent="." unique_id=904870888]
+offset_left = -920.0
+offset_top = -500.0
+offset_right = 920.0
+offset_bottom = -290.0
+theme_override_fonts/font = ExtResource("3_rbgr5")
+theme_override_font_sizes/font_size = 150
+text = "Menu"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="return_button" to="." method="_on_return_button_pressed"]
